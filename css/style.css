@@ -126,6 +126,11 @@ body {
   background-color: #fff;
 }
 
+.animated-btn {
+  animation: moveInTop 0.7s ease-out;
+  animation-fill-mode: backwards;
+}
+
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -156,4 +161,18 @@ body {
 
 .btn-white::after {
   background: #fff;
+}
+
+/* Animation */
+
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
