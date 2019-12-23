@@ -1,3 +1,8 @@
+// Variables
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
 /* Basic Resetting  */
 *,
 *::after,
@@ -25,8 +30,8 @@ body {
   height: 90vh;
   background-image: linear-gradient(
       to left,
-      rgba(40, 180, 133, 0.8),
-      rgba(126, 213, 111, 0.8)
+      rgba($color-primary-dark, 0.8),
+      rgba($color-primary-light, 0.8)
     ),
     url(../img/hero.jpg);
   background-size: cover;
@@ -66,6 +71,7 @@ body {
   letter-spacing: 3.5rem;
   animation-name: moveInLeft;
   animation-duration: 1s;
+
   /*   
   other animation properities
   animation-delay: 5s;
@@ -113,6 +119,7 @@ body {
 }
 
 /* Animated Button */
+
 .btn:link,
 .btn:visited {
   padding: 1.5rem 4rem;
@@ -169,11 +176,13 @@ body {
 }
 
 /* Animation */
+
 @keyframes moveInTop {
   0% {
     opacity: 0;
     transform: translateY(7rem);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
